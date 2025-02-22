@@ -36,9 +36,9 @@ jobs:
         echo $CONFIG_KEY > configkey.txt
         sed -i '10 r configid.txt' 2.py
         sed -i '12 r configkey.txt' 2.py
-    - name: Test Api #Api调用
-      run: | 
         echo 2.py > test.log
+    - name: Test Api #Api调用
+      run: |         
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
         python 2.py
     - name: Delete secrets config #删除机密
